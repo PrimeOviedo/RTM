@@ -208,6 +208,130 @@ p {
     margin-top: 3rem;
 }
 
+.contexto-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contexto-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contexto-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.contexto-imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+.etapas-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.etapas-texto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.etapas-imagen {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.etapas-imagen img {
+    width: 100%;
+    max-width: 420px;
+    min-width: 280px;
+    height: auto;
+}
+
+.etapas-imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.carousel-inner {
+    position: relative;
+    min-height: 160px;
+}
+
+.timeline-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    transform: translateX(40px);
+}
+
+.timeline-item.active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+    transform: translateX(0);
+}
+
+.carousel-controls {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.carousel-controls button {
+    background: #d6001c;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.carousel-controls button:hover {
+    background: #a80016;
+}
+
+.carousel-indicators {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.carousel-indicators span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators span.active {
+    background-color: #d6001c;
+}
+
 /* ======= 7. RESPONSIVE ======= */
 @media (max-width: 1200px) {
 
@@ -240,6 +364,20 @@ p {
 
     .nav ul.show {
         display: flex;
+    }
+
+    .contexto-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .etapas-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .etapas-imagen img {
+        max-width: 500px;
     }
 
     .hero-content h1 {
