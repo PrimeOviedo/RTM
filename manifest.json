@@ -2,7 +2,7 @@
   "name": "Compendio RTM - Comercial",
   "short_name": "Compendio RTM",
   "description": "Proyecto de reestructura de rutas en Coca-Cola FEMSA",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#d6001c",
