@@ -1,19 +1,20 @@
 {
-  "name": "Compendio de Reestructura",
-  "short_name": "Compendio RTM",
-  "start_url": "./index.html",
+  "name": "RTM - Comercial",
+  "short_name": "RTM",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "theme_color": "#c4001d",
   "orientation": "portrait",
+  "scope": "./",
   "icons": [
     {
-      "src": "assets/icon/icon192.png",
+      "src": "assets/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/icon/icon512.png",
+      "src": "assets/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
