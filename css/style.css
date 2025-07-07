@@ -16,7 +16,7 @@ html {
 
 body {
     margin: 0;
-    padding-top: 70px; /* ajusta esto al alto exacto del header */
+    padding-top: calc(env(safe-area-inset-top) + 70px); /* ajusta 80px a la altura real de tu header */
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     background-color: #fff;
@@ -52,8 +52,9 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: white; /* o el color de tu header */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* opcional */
+    background-color: #fff; /* o el color que uses */
+    padding-top: env(safe-area-inset-top); /* evita que el notch lo tape */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .header .container {
