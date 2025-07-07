@@ -46,13 +46,14 @@ p {
 }
 
 /* ======= 2. HEADER Y NAVEGACIÓN ======= */
-.header {
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    position: sticky;
+header {
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
     width: 100%;
+    z-index: 999;
+    background-color: #ffffff; /* o el color que uses */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* opcional, para dar profundidad */
 }
 
 .header .container {
