@@ -1,20 +1,20 @@
 {
-  "name": "RTM - Comercial",
-  "short_name": "RTM",
-  "start_url": ".",
+  "name": "Compendio RTM - Comercial",
+  "short_name": "Compendio RTM",
+  "description": "Proyecto de reestructura de rutas en Coca-Cola FEMSA",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#c4001d",
+  "theme_color": "#d6001c",
   "orientation": "portrait",
-  "scope": "./",
   "icons": [
     {
-      "src": "assets/icons/icon-192.png",
+      "src": "/assets/icon/icon192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/icon-512.png",
+      "src": "/assets/icon/icon512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

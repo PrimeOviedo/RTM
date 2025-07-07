@@ -1,3 +1,4 @@
+
 /* ======= 1. RESET Y UTILIDADES ======= */
 * {
     margin: 0;
@@ -16,12 +17,25 @@ html {
 
 body {
     margin: 0;
-    padding-top: calc(env(safe-area-inset-top) + 70px); /* ajusta 80px a la altura real de tu header */
+    padding-top: calc(env(safe-area-inset-top) + 70px);
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     background-color: #fff;
     color: #222;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Safe area fix for iPhone notch */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: env(safe-area-inset-top);
+    background-color: #fff;
+    z-index: 999;
 }
 
 .container {
@@ -52,8 +66,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #fff; /* o el color que uses */
-    padding-top: env(safe-area-inset-top); /* evita que el notch lo tape */
+    background-color: #fff;
+    padding-top: env(safe-area-inset-top);
     padding-bottom: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -62,19 +76,6 @@ header {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
 }
-
-/* Para cubrir el notch completamente y evitar que se vea el contenido detrás del header */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: env(safe-area-inset-top);
-    background-color: #fff; /* el mismo color del header */
-    z-index: 999; /* justo debajo del header */
-}
-
 
 .header .container {
     display: flex;
@@ -118,7 +119,7 @@ body::before {
 .hero {
     position: relative;
     width: 100%;
-    min-height: 50vh;
+    height: 50vh;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -184,59 +185,8 @@ body::before {
 }
 
 /* ======= 4. SECCIONES Y CONTENIDO ======= */
-.timeline {
-    display: grid;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.timeline-item {
-    background: #fff;
-    border-left: 5px solid #d6001c;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-/* ======= 5. CARDS Y KPIs ======= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.card {
-    background: #fff;
-    border: 1px solid #eee;
-    padding: 1.5rem;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card h3 {
-    font-size: 2rem;
-    color: #d6001c;
-    margin-bottom: 0.5rem;
-}
-
-/* ======= 6. FOOTER ======= */
-.footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 0;
-    font-size: 0.9rem;
-    margin-top: 3rem;
-}
-
-.contexto-flex {
+.contexto-flex,
+.etapas-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -244,54 +194,25 @@ body::before {
     gap: 2rem;
 }
 
-.contexto-texto {
-    flex: 1;
-    min-width: 280px;
-}
-
-.contexto-imagen {
-    flex: 1;
-    text-align: center;
-}
-
-.contexto-imagen img {
-    max-width: 100%;
-    height: auto;
-}
-
-.etapas-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
+.contexto-texto,
 .etapas-texto {
     flex: 1;
-    min-width: 300px;
-    max-width: 600px;
+    min-width: 280px;
 }
 
+.contexto-imagen,
 .etapas-imagen {
     flex: 1;
-    min-width: 300px;
-    max-width: 500px;
     text-align: center;
 }
 
-.etapas-imagen img {
-    width: 100%;
-    max-width: 420px;
-    min-width: 280px;
-    height: auto;
-}
-
+.contexto-imagen img,
 .etapas-imagen img {
     max-width: 100%;
     height: auto;
 }
 
+/* ======= 5. CAROUSEL ======= */
 .carousel {
     position: relative;
     width: 100%;
@@ -360,9 +281,45 @@ body::before {
     background-color: #d6001c;
 }
 
+/* ======= 6. CARDS Y FOOTER ======= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 2rem;
+    color: #d6001c;
+    margin-bottom: 0.5rem;
+}
+
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
 /* ======= 7. RESPONSIVE ======= */
 @media (max-width: 1200px) {
-
     .hero-video {
         width: auto;
         height: 100%;
@@ -370,10 +327,9 @@ body::before {
 }
 
 @media (max-width: 800px) {
-
     .nav-toggle {
         display: block;
-        margin-left: auto;         /* lo empuja a la derecha */
+        margin-left: auto;
         padding-right: 0;
     }
 
@@ -394,11 +350,7 @@ body::before {
         display: flex;
     }
 
-    .contexto-flex {
-        flex-direction: column;
-        text-align: center;
-    }
-
+    .contexto-flex,
     .etapas-flex {
         flex-direction: column;
         text-align: center;
