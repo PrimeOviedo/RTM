@@ -57,6 +57,18 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Para cubrir el notch completamente y evitar que se vea el contenido detrás del header */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: env(safe-area-inset-top);
+    background-color: #fff; /* el mismo color del header */
+    z-index: 999; /* justo debajo del header */
+}
+
 .header .container {
     display: flex;
     justify-content: space-between;
