@@ -388,8 +388,8 @@ header {
 @media (max-width: 1200px) {
 
     .container {
-        margin-left: max(2.5rem, env(safe-area-inset-left));
-        margin-right: max(2.5rem, env(safe-area-inset-right));
+        margin-left: max(2rem, env(safe-area-inset-left));
+        margin-right: max(2rem, env(safe-area-inset-right));
     }
 
     .hero-video {
@@ -398,7 +398,7 @@ header {
     }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 800px) {
 
     .container {
         margin-left: max(0rem, env(safe-area-inset-left));
