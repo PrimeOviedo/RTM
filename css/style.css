@@ -346,12 +346,17 @@ header {
 @media (max-width: 1200px) {
 
     .hero-video {
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 860px) {
+
+    .hero-video {
+        width: auto;
+        height: 100%;
+    }
 
     .nav-toggle {
         display: block;
