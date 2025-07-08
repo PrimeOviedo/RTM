@@ -66,9 +66,18 @@ header {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* espacio entre imagen y texto */
     font-size: 1.5rem;
     font-weight: 700;
     color: #d6001c;
+}
+
+.logo img {
+    height: 32px; /* ajusta según tu imagen */
+    width: auto;
+    display: block;
 }
 
 .nav ul {
